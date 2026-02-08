@@ -41,7 +41,15 @@ git branch -M main
 git push -u origin main
 ```
 
-3. **Deploy the site**: Connect the repo to [Vercel](https://vercel.com) (recommended for Next.js) or another host. Vercel will build and deploy on every push to `main`.
+3. **Deploy the site**: Connect the repo to [Vercel](https://vercel.com) (recommended for Next.js) or use **GitHub Pages** (see below).
+
+## Deploy to GitHub Pages (GP)
+
+This repo includes a GitHub Actions workflow that builds and deploys to **GitHub Pages** on every push to `main` or `master`.
+
+1. **Enable GitHub Pages**: In your repo on GitHub go to **Settings → Pages**. Under "Build and deployment", set **Source** to **GitHub Actions**.
+2. **Push the workflow**: Commit and push the `.github/workflows/deploy-pages.yml` file (and the `next.config` static export settings). The first run will deploy the site.
+3. **Live URL**: After the workflow completes, the site will be at `https://<username>.github.io/<repo-name>/`.
 
 ## Deploy on Vercel
 
