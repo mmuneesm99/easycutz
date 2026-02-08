@@ -4,9 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   // For GitHub Pages project site (username.github.io/repo-name), set in workflow:
   basePath: '/easycutz',
-  assetPrefix: process.env.GITHUB_PAGES_BASE_PATH
-    ? `${process.env.GITHUB_PAGES_BASE_PATH}/`
-    : "",
+  assetPrefix: "/easycutz",
 };
 
 export default nextConfig;
